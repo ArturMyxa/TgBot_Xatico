@@ -85,7 +85,7 @@ def api_check_imei():
     imei = data.get('imei')
     token = data.get('token')
 
-    if token != 'YOUR_API_AUTH_TOKEN':  # Замените на ваш токен авторизации
+    if token != 'YOUR_API_AUTH_TOKEN':  # токен авторизации
         return jsonify({'error': 'Unauthorized'}), 401
 
     if not imei or not isinstance(imei, str) or len(imei) != 15 or not imei.isdigit():
@@ -96,4 +96,5 @@ def api_check_imei():
 
 # Запуск Flask
 if __name__ == '__main__':
-    app.run(port=8000)  # Вы можете изменить порт по необходимости
+    app.run(port=8000)  #менять цифры если порт занят
+    порт по необходимости
